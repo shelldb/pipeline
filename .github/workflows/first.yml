@@ -42,10 +42,10 @@ jobs:
           wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
           echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
           sudo apt update
-          $env:ARM_SUBSCRIPTION_ID=38a6c73a-b0cf-45a8-bcee-5da8f5a9f8da
-          $env:ARM_CLIENT_ID=${{ secrets.APP_ID }}
-          $env:ARM_CLIENT_SECRET=${{ secrets.KEY }}
-          $env:ARM_TENANT_ID=${{ secrets.TENANT }}
+          env:ARM_SUBSCRIPTION_ID=38a6c73a-b0cf-45a8-bcee-5da8f5a9f8da
+          env:ARM_CLIENT_ID=${{ secrets.APP_ID }}
+          env:ARM_CLIENT_SECRET=${{ secrets.KEY }}
+          env:ARM_TENANT_ID=${{ secrets.TENANT }}
           sudo apt-get install terraform
           terraform init
           terraform plan
