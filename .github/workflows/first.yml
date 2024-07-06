@@ -50,4 +50,3 @@ jobs:
           terraform init
           terraform plan
           terraform apply
-te
