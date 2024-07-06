@@ -49,5 +49,5 @@ jobs:
           export ARM_TENANT_ID=${{ secrets.TENANT }}
           terraform init
           terraform plan
-          #terraform apply -auto-approve
+          terraform apply -auto-approve
           terraform state list
