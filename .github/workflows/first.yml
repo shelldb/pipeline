@@ -48,5 +48,5 @@ jobs:
           export ARM_CLIENT_SECRET=${{ secrets.KEY }}
           export ARM_TENANT_ID=${{ secrets.TENANT }}
           terraform init
-          terraform plan
+          terraform plan main.tf
           terraform apply
