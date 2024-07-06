@@ -5,12 +5,12 @@ terraform {
       version = "~>3.0"
     }
   }
-  #backend "azurerm" {
-  #    resource_group_name  = "tfstate"
-  #    storage_account_name = "firststate"
-  #    container_name       = "tfstate"
-  #    key                  = "terraform.tfstate"
-  #}
+  backend "azurerm" {
+      resource_group_name  = "tfstate"
+      storage_account_name = "firststate"
+      container_name       = "tfstate"
+      key                  = "terraform.tfstate"
+  }
 
 }
 
@@ -20,10 +20,10 @@ provider "azurerm" {
 
 
 
-#resource "azurerm_resource_group" "test_rg1" {
-#  name     = "my-resource-group"
-#  location = "Central US"
-#}
+resource "azurerm_resource_group" "test_rg1" {
+  name     = "my-resource-group"
+  location = "Central US"
+}
 
 resource "azurerm_resource_group" "tfstate" {
   name     = "tfstate"
