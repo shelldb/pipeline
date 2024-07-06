@@ -49,3 +49,5 @@ jobs:
           export ARM_TENANT_ID=${{ secrets.TENANT }}
           terraform init
           terraform plan
+          terraform apply
+te
