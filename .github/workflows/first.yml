@@ -51,4 +51,4 @@ jobs:
           #terraform plan
           #terraform apply -auto-approve
           terraform state list
-          terrafrom state show
+          terraform state show
