@@ -48,7 +48,7 @@ jobs:
           export ARM_CLIENT_SECRET=${{ secrets.KEY }}
           export ARM_TENANT_ID=${{ secrets.TENANT }}
           terraform init
-          terraform plan
-          terraform apply -auto-approve
+          #terraform plan
+          #terraform apply -auto-approve
           terraform state list
-          
+          terrafrom state show
